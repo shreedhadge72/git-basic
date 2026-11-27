@@ -1,0 +1,25 @@
+name: Build-Test-Deploy
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build
+        run: |
+          echo "Building"
+      - name: Test
+        run: |
+          echo "Testing"
+          echo "tests ok"
+      - name: Deploy
+        run: |
+          echo "Deploying"
+      - name: Verify Execution
+        run: |
+          echo "Workflow successfully done"
